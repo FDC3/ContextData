@@ -1,3 +1,4 @@
+# FDC3 Context Objects - Version 0.0.1 #
 ## Context Object Overview ##
 
 * To interoperate, Apps need to exchange commonly recognized context structures that can indicate topic with any number of identifiers or mappings to different systems.  
@@ -15,10 +16,10 @@ FDC3 recognizes that there are other object definitions for providing context be
 
 ```javascript
 {
-object: (string) //object type
-definition: (string) //uri of object type definition
-version: (string) //version # (semver)
-data: (array) //the context payload
+	object: (string) //object type
+	definition: (string) //uri of object type definition
+	version: (string) //version # (semver)
+	data: (array) //the context payload
 }
 ```
 
@@ -27,9 +28,9 @@ data: (array) //the context payload
 ```javascript
 {
    “object” : ”fdc3-context”,
-    “definition” : ”https://fdc3.org/context/1.0.0/”,
-    “version” : ”1.0.0”,
-    “data” :
+   “definition” : ”https://fdc3.org/context/1.0.0/”,
+   “version” : ”1.0.0”,
+   “data” :
        [
           {
              “type” : ”security”,
@@ -136,8 +137,13 @@ id:{
 
 ### IBM as an Organization ###
 ```javascript
-[
 {
+   “object” : ”fdc3-context”,
+   “definition” : ”https://fdc3.org/context/1.0.0/”,
+   “version” : ”1.0.0”,
+   “data” :
+   [
+     {
 	name:”International Business Machines”,
 	type:”Organization”,
 	id:{
@@ -145,64 +151,84 @@ id:{
 		“PermID” : “4295904307”,
 		“LEI” : “VGRQXHF3J8VDLUA7XE92”
 	}
+      }
+   ]
 }
-]
 ```
 
 ### IBM Bond as a Security ###
 ```javascript
-[
+{
+   “object” : ”fdc3-context”,
+   “definition” : ”https://fdc3.org/context/1.0.0/”,
+   “version” : ”1.0.0”,
+   “data” :
+   [
 	{
 		name:”IBM 6.25% of '19”,
-type:”Security”,
-“id” : {
+                type:”Security”,
+                “id” : {
 		“default” : ”IBM 6.25% of '19”,
-	“CUSIP” : ”090241201”
+  	        “CUSIP” : ”090241201”
+                }
+        }
+   ]
 }
-	
-}
-]
 ```
 ### Person and Organization ###
 ```javascript
 {
-	object:”fdc3-context”,
-	data:[
-	{
-		name:”Virginia (Ginni) M. Rometty”,
-type:”Person”,
-id:{
+   “object” : ”fdc3-context”,
+   “definition” : ”https://fdc3.org/context/1.0.0/”,
+   “version” : ”1.0.0”,
+   “data” : [
+    {
+
+	name:”Virginia (Ginni) M. Rometty”,
+        type:”Person”,
+        id:{
 		“default” : ”Virginia Rometty”,
-	“PermID” : “34415504516”
-}
-	
-},
-{
+	        “PermID” : “34415504516”
+            }
+	},
+        {
 	name:”International Business Machines”,
 	type:”Organization”,
 	id:{
 		default:”ibm”
 	}
-}
+    }
 
-]
+   ]
 }
 ```
 ### Industry ###
 ```javascript
-[
 {
-	name:”Information Technology”,
-	type:”Industry”,
-	id:{
+   “object” : ”fdc3-context”,
+   “definition” : ”https://fdc3.org/context/1.0.0/”,
+   “version” : ”1.0.0”,
+   “data” :
+   [
+          {
+	    name:”Information Technology”,
+	    type:”Industry”,
+	    id:{
 		default:”Information Technology”,
 		GICS:“45”
-	}
+	        }
+          }
+   ]
 }
-]
-Geo
-[
+
+### Geo ###
 {
+   “object” : ”fdc3-context”,
+   “definition” : ”https://fdc3.org/context/1.0.0/”,
+   “version” : ”1.0.0”,
+   “data” :
+   [
+      {
 	name:”United States of America”,
 	type:”Geo”,
 	id:{
@@ -210,13 +236,19 @@ Geo
 		ISO ALPHA-2:“US”,
 		ISO ALPHA-3:”USA”,
 	}
+     }
+  ]
 }
-]
 ```
 ### Contact ###
 ```javascript
-[
 {
+   “object” : ”fdc3-context”,
+   “definition” : ”https://fdc3.org/context/1.0.0/”,
+   “version” : ”1.0.0”,
+   “data” :
+   [
+      {
 	name:”Nick Kolba”,
 	type:”Contact”,
 	id:{
@@ -225,6 +257,7 @@ Geo
 		twitter:”nkolba”,
 		phone:”9171234567”
 	}
+      }
+   ]
 }
-]
 ```
