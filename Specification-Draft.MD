@@ -16,10 +16,10 @@ FDC3 recognizes that there are other object definitions for providing context be
 
 ```javascript
 {
-	object: (string) //object type
-	definition: (string) //uri of object type definition
-	version: (string) //version # (semver)
-	data: (array) //the context payload
+	"object": (string), //object type
+	"definition": (string) //uri of object type definition
+	"version": (string) //version # (semver)
+	"data": (array) //the context payload
 }
 ```
 
@@ -27,21 +27,21 @@ FDC3 recognizes that there are other object definitions for providing context be
 #### FDC3 Context Object ####
 ```javascript
 {
-   “object” : ”fdc3-context”,
-   “definition” : ”https://fdc3.org/context/1.0.0/”,
-   “version” : ”1.0.0”,
-   “data” :
+   "object" : "fdc3-context",
+   "definition" : "https://fdc3.org/context/1.0.0/",
+   "version" : "1.0.0",
+   "data" :
        [
           {
-             “type” : ”security”,
-    	 “name” : ”Apple”,
-	 “id” : 
+             "type" : "security",
+    	 "name" : "Apple",
+	 "id" : 
                {  
-                  “ticker” : ”aapl”
-                   “ISIN” : “US0378331005”,
-                   “CUSIP” : “037833100”,
-                   “FIGI” : ”BBG000B9XRY4”,
-                   “default“ : “aapl”
+                  "ticker" : "aapl"
+                   "ISIN" : "US0378331005",
+                   "CUSIP" : "037833100",
+                   "FIGI" : "BBG000B9XRY4",
+                   "default" : "aapl"
                }
           }
       ]
@@ -51,9 +51,9 @@ FDC3 recognizes that there are other object definitions for providing context be
 #### Symphony Financial Object ####
 ```javascript
 {
-  object:”org.symphonyoss”,
-  version:”0.2”,
-  url:”https://symphonyoss.atlassian.net/wiki/x/RgBnAQ”,
+  object:"org.symphonyoss",
+  version:"0.2",
+  url:"https://symphonyoss.atlassian.net/wiki/x/RgBnAQ",
   data:[
   {
     "type":         "org.symphonyoss.fin.security",
@@ -121,15 +121,15 @@ For most context types, name plus an ID dictionary is sufficient.  Some context 
 All standard identifier names are reserved names. Applications may use their own identifiers ad hoc. For example:
 ```javascript
 id:{
-    CUSIP:”1234”,
-    foo:”bar"
+    "CUSIP":"1234",
+    "foo":"bar"
 }
 ```
-The identifier “foo” is proprietary, an application that can use it is free to do so. However, since multiple applications may want to use the “foo” name and may use it to mean different things, there is a need for applications to ensure that their identifiers use naming conventions that will avoid collision. The recommended approach here is to prefix the identifier name with a prefix of “appname.identifier”. For example, if the app above were “my-app”, the id block would look like this:
+The identifier “foo” is proprietary, an application that can use it is free to do so. However, since multiple applications may want to use the "foo” name and may use it to mean different things, there is a need for applications to ensure that their identifiers use naming conventions that will avoid collision. The recommended approach here is to prefix the identifier name with a prefix of “appname.identifier”. For example, if the app above were “my-app”, the id block would look like this:
 ```javascript
 id:{
-    CUSIP:”1234”,
-    my-app.foo:”bar"
+    "CUSIP":"1234",
+    "my-app.foo":"bar"
 }
 ```
 
@@ -138,18 +138,18 @@ id:{
 ### IBM as an Organization ###
 ```javascript
 {
-   “object” : ”fdc3-context”,
-   “definition” : ”https://fdc3.org/context/1.0.0/”,
-   “version” : ”1.0.0”,
-   “data” :
+   "object" : "fdc3-context",
+   "definition" : "https://fdc3.org/context/1.0.0/",
+   "version" : "1.0.0",
+   "data" :
    [
      {
-	name:”International Business Machines”,
-	type:”Organization”,
-	id:{
-		“default” : ”ibm”,
-		“PermID” : “4295904307”,
-		“LEI” : “VGRQXHF3J8VDLUA7XE92”
+	"name":"International Business Machines",
+	"type":"Organization",
+	"id":{
+		"default" : "ibm",
+		"PermID" : "4295904307",
+		"LEI" : "VGRQXHF3J8VDLUA7XE92"
 	}
       }
    ]
@@ -159,17 +159,17 @@ id:{
 ### IBM Bond as a Security ###
 ```javascript
 {
-   “object” : ”fdc3-context”,
-   “definition” : ”https://fdc3.org/context/1.0.0/”,
-   “version” : ”1.0.0”,
-   “data” :
+   "object" : "fdc3-context",
+   "definition" : "https://fdc3.org/context/1.0.0/",
+   "version" : "1.0.0",
+   "data" :
    [
 	{
-		name:”IBM 6.25% of '19”,
-                type:”Security”,
-                “id” : {
-		“default” : ”IBM 6.25% of '19”,
-  	        “CUSIP” : ”090241201”
+		"name":"IBM 6.25% of '19",
+                "type":"Security",
+                "id" : {
+		"default" : "IBM 6.25% of '19",
+  	        "CUSIP" : "090241201"
                 }
         }
    ]
@@ -178,24 +178,24 @@ id:{
 ### Person and Organization ###
 ```javascript
 {
-   “object” : ”fdc3-context”,
-   “definition” : ”https://fdc3.org/context/1.0.0/”,
-   “version” : ”1.0.0”,
-   “data” : [
+   "object" : "fdc3-context",
+   "definition" : "https://fdc3.org/context/1.0.0/",
+   "version" : "1.0.0",
+   "data" : [
     {
 
-	name:”Virginia (Ginni) M. Rometty”,
-        type:”Person”,
-        id:{
-		“default” : ”Virginia Rometty”,
-	        “PermID” : “34415504516”
+	"name":"Virginia (Ginni) M. Rometty",
+        "type":"Person",
+        "id":{
+		"default" : "Virginia Rometty",
+	        "PermID" : "34415504516"
             }
 	},
         {
-	name:”International Business Machines”,
-	type:”Organization”,
-	id:{
-		default:”ibm”
+	"name":"International Business Machines",
+	"type":"Organization",
+	"id":{
+		"default":"ibm"
 	}
     }
 
@@ -205,17 +205,17 @@ id:{
 ### Industry ###
 ```javascript
 {
-   “object” : ”fdc3-context”,
-   “definition” : ”https://fdc3.org/context/1.0.0/”,
-   “version” : ”1.0.0”,
-   “data” :
+   "object" : "fdc3-context",
+   "definition" : "https://fdc3.org/context/1.0.0/",
+   "version" : "1.0.0",
+   "data" :
    [
           {
-	    name:”Information Technology”,
-	    type:”Industry”,
-	    id:{
-		default:”Information Technology”,
-		GICS:“45”
+	    "name":"Information Technology",
+	    "type":"Industry",
+	    "id":{
+		"default":"Information Technology",
+		"GICS":"45"
 	        }
           }
    ]
@@ -223,18 +223,18 @@ id:{
 
 ### Geo ###
 {
-   “object” : ”fdc3-context”,
-   “definition” : ”https://fdc3.org/context/1.0.0/”,
-   “version” : ”1.0.0”,
-   “data” :
+   "object" : "fdc3-context",
+   "definition" : "https://fdc3.org/context/1.0.0/",
+   "version" : "1.0.0",
+   "data" :
    [
       {
-	name:”United States of America”,
-	type:”Geo”,
-	id:{
-		default:”USA”,
-		ISO ALPHA-2:“US”,
-		ISO ALPHA-3:”USA”,
+	"name":"United States of America",
+	"type":"Geo",
+	"id":{
+		"default":"USA",
+		"ISO ALPHA-2":"US",
+		"ISO ALPHA-3":"USA"
 	}
      }
   ]
@@ -243,19 +243,19 @@ id:{
 ### Contact ###
 ```javascript
 {
-   “object” : ”fdc3-context”,
-   “definition” : ”https://fdc3.org/context/1.0.0/”,
-   “version” : ”1.0.0”,
-   “data” :
+   "object" : "fdc3-context",
+   "definition" : "https://fdc3.org/context/1.0.0/",
+   "version" : "1.0.0",
+   "data" :
    [
       {
-	name:”Nick Kolba”,
-	type:”Contact”,
-	id:{
-		default:”Nick Kolba”,
-		email:“nick@openfin.co”,
-		twitter:”nkolba”,
-		phone:”9171234567”
+	"name":"Nick Kolba",
+	"type":"Contact",
+	"id":{
+		"default":"Nick Kolba",
+		"email":"nick@openfin.co",
+		"twitter":"nkolba",
+		"phone":"9171234567"
 	}
       }
    ]
