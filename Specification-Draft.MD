@@ -92,16 +92,16 @@ For most context types, name plus an ID dictionary is sufficient.  Some context 
 ### Common Types & Identifiers ###
 * Organization
   * LEI
-  * PermID
+  * PERMID
 * Security
-  * Ticker
-  * Exchange
+  * ticker
+  * exchange
   * CUSIP
   * ISIN
   * SEDOL
   * RIC
   * BBG
-  * PermID
+  * PERMID
   * FIGI
 * Industry
   * GICS
@@ -112,10 +112,13 @@ For most context types, name plus an ID dictionary is sufficient.  Some context 
   * geocode
 * Person
   * name
-  * PermID
+  * PERMID
 * Contact
   * name
   * email
+  
+#### Note ####
+Where an identifier is the name of an existing standard, external to FDC3, it's represented in all caps. For example: FIGI, PERMID, CUSIP, ISO-2. When an identifer is a more general concept, it is represented in all lower case.  For example: ticker, name, geocode, email.
 
 ### Proprietary Identifiers ###
 All standard identifier names are reserved names. Applications may use their own identifiers ad hoc. For example:
