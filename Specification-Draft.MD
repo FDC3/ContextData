@@ -48,7 +48,7 @@ FDC3 recognizes that there are other object definitions for providing context be
 }
 ```
 
-#### Symphony Financial Object ####
+#### Including a Symphony Financial Object in a FDC3 payload ####
 ```javascript
 {
   object:"org.symphonyoss",
@@ -151,7 +151,7 @@ id:{
 	"type":"Organization",
 	"id":{
 		"default" : "ibm",
-		"PermID" : "4295904307",
+		"PERMID" : "4295904307",
 		"LEI" : "VGRQXHF3J8VDLUA7XE92"
 	}
       }
@@ -191,7 +191,7 @@ id:{
         "type":"Person",
         "id":{
 		"default" : "Virginia Rometty",
-	        "PermID" : "34415504516"
+	        "PERMID" : "34415504516"
             }
 	},
         {
