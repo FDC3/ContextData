@@ -1,0 +1,53 @@
+{
+    "objectType": "fdc3-context",
+    "definition": "https://fdc3.org/ContextSchema.json",
+    "version": "0.0.2",
+    "contextItems": [
+        {
+        "displayName": "Apple",
+        "displayType": "Equity",
+        "data": [
+            {
+                "format": "fdc3.security",
+                "version": "0.0.1",
+                "itemData": {
+                    "ISIN": "",
+                    "CUSIP": "",
+                    "BBG": "",
+                    "SEDOL": "",
+                    "ticker": "",
+                    "com.factset.symbology.entity":"",
+                    "com.factset.symbology.regionalticker": ""                        
+                }
+            },
+            {
+                "format": "com.factset.security",
+                "version": "0.0.1",
+                "itemData": {
+                    "ticker": "",
+                    "symbology.entity":"",
+                    "regionalticker": ""                        
+                }
+            },
+            {
+                "format": "figi.???",
+                "version": "0.0.1",
+                "itemData": {
+                    "ticker": "",
+                    "symbology.entity":"",
+                    "regionalticker": ""                        
+                }
+            },
+            {
+                "format": "custom.tick42.demo.Instrument",
+                "version": "0.0.1",
+                "itemData": {
+                    "!!!!": "",
+                    "symbology.entity":"",
+                    "regionalticker": ""                        
+                }
+            }
+        ]
+        }
+    ]
+  }

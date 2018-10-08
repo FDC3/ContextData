@@ -1,0 +1,44 @@
+{
+    "objectType": "fdc3-context",
+    "definition": "https://fdc3.org/ContextSchema.json",
+    "version": "0.0.2",
+    "contextItems": [
+        {
+        "displayName": "Fred Smith",
+        "displayType": "Contact",
+        "data": [
+            {
+                "format": "fdc3.Contact",
+                "version": "0.0.1",
+                "itemData": {                       
+                }
+            },
+            {
+                "format": "com.symphony.Contact",
+                "version": "0.0.1",
+                "itemData": {
+                    "ticker": "",
+                    "symbology.entity":"",
+                    "regionalticker": ""                        
+                }
+            },
+            {
+                "format": "com.microsoft.Outlook.Contact",
+                "version": "0.0.1",
+                "itemData": {
+                    "ticker": "",
+                    "symbology.entity":"",
+                    "regionalticker": ""                        
+                }
+            },
+            {
+                "format": "custom.tick42.demo.Contact",
+                "version": "0.0.1",
+                "itemData": {
+                    "!!!!": ""                        
+                }
+            }
+        ] 
+    }
+    ]
+  }
