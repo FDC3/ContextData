@@ -30,21 +30,24 @@
                 }
             },
             {
-                "format": "figi.???",
+                "format": "com.openfigi.Equity",
                 "version": "0.0.1",
                 "itemData": {
-                    "ticker": "",
-                    "symbology.entity":"",
-                    "regionalticker": ""                        
+                    "Name": "Apple Inc",
+                    "Ticker":"AAPL",
+                    "ExchangeCode": "XN",
+                    "FIGI": "BBG000N89284",
+                    "FIGI Composite": "BBG000N88V36",
+                    "SecurityType": "Equity.CommonStock"
                 }
             },
             {
                 "format": "custom.tick42.demo.Instrument",
                 "version": "0.0.1",
                 "itemData": {
-                    "!!!!": "",
-                    "symbology.entity":"",
-                    "regionalticker": ""                        
+                    "marketDataSource": "Reuters",
+                    "Ticker":"AAPL",
+                    "marketDataTicker": "AAPL.N"  
                 }
             }
         ]
