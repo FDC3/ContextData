@@ -1,0 +1,48 @@
+{
+    "objectType": "fdc3-context",
+    "definition": "https://fdc3.org/ContextSchema.json",
+    "version": "0.0.2",
+    "contextItems": [
+        {
+        "displayName": "Fred Smith",
+        "displayType": "Contact",
+        "data": [
+            {
+                "format": "fdc3.Contact",
+                "version": "0.0.1",
+                "itemData": {
+                    "firstName": "Fred",
+                    "lastName": "Smith",
+                    "email": "fred@smith.com"                       
+                }
+            },
+            {
+                "format": "com.symphony.Contact",
+                "version": "0.0.1",
+                "itemData": {
+                    "name": "Fred Smith",
+                    "org":"Independent",
+                    "symphonyhandle": "fred-smith42"                        
+                }
+            },
+            {
+                "format": "com.microsoft.Outlook.Contact",
+                "version": "0.0.1",
+                "itemData": {
+                    "firstName": "Fred",
+                    "lastName": "Smith",
+                    "email": "fred@smith.com",
+                    "outlookId": "12345678"                       
+                }
+            },
+            {
+                "format": "custom.tick42.demo.Contact",
+                "version": "0.0.1",
+                "itemData": {
+                    "!!!!": ""                        
+                }
+            }
+        ] 
+    }
+    ]
+  }
