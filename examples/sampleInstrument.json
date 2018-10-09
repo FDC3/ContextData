@@ -47,7 +47,8 @@
                 "itemData": {
                     "marketDataSource": "Reuters",
                     "Ticker":"AAPL",
-                    "marketDataTicker": "AAPL.N"  
+                    "marketDataTicker": "AAPL.N",
+                    "demoInstrumentId": "567890"  
                 }
             }
         ]

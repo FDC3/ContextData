@@ -2,7 +2,7 @@
     "$id": "http://finos.fdc3.com/context.json",
     "$schema": "http://json-schema.org/draft-06/schema#",
     "description": "Schema describing the FDC3 Context data item.",
-    "title": "Context",
+    "title": "FDC3.Context",
     "type": "object",
     "required": ["objectType", "contextItems"], 
     "properties": {

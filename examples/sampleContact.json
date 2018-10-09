@@ -10,25 +10,29 @@
             {
                 "format": "fdc3.Contact",
                 "version": "0.0.1",
-                "itemData": {                       
+                "itemData": {
+                    "firstName": "Fred",
+                    "lastName": "Smith",
+                    "email": "fred@smith.com"                       
                 }
             },
             {
                 "format": "com.symphony.Contact",
                 "version": "0.0.1",
                 "itemData": {
-                    "ticker": "",
-                    "symbology.entity":"",
-                    "regionalticker": ""                        
+                    "name": "Fred Smith",
+                    "org":"Independent",
+                    "symphonyhandle": "fred-smith42"                        
                 }
             },
             {
                 "format": "com.microsoft.Outlook.Contact",
                 "version": "0.0.1",
                 "itemData": {
-                    "ticker": "",
-                    "symbology.entity":"",
-                    "regionalticker": ""                        
+                    "firstName": "Fred",
+                    "lastName": "Smith",
+                    "email": "fred@smith.com",
+                    "outlookId": "12345678"                       
                 }
             },
             {
