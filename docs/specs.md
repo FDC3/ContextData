@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # FDC3 Context Objects - Version 0.0.1 #
 ## Context Object Overview ##
 
@@ -16,10 +20,10 @@ FDC3 recognizes that there are other object definitions for providing context be
 
 ```javascript
 {
-	"object": (string), //object type
-	"definition": (string) //uri of object type definition
-	"version": (string) //version # (semver)
-	"data": (array) //the context payload
+    "object": (string), //object type
+    "definition": (string) //uri of object type definition
+    "version": (string) //version # (semver)
+    "data": (array) //the context payload
 }
 ```
 
@@ -34,8 +38,8 @@ FDC3 recognizes that there are other object definitions for providing context be
        [
           {
              "type" : "security",
-    	 "name" : "Apple",
-	 "id" : 
+         "name" : "Apple",
+     "id" : 
                {  
                   "ticker" : "aapl"
                    "ISIN" : "US0378331005",
@@ -147,13 +151,13 @@ id:{
    "data" :
    [
      {
-	"name":"International Business Machines",
-	"type":"Organization",
-	"id":{
-		"default" : "ibm",
-		"PERMID" : "4295904307",
-		"LEI" : "VGRQXHF3J8VDLUA7XE92"
-	}
+    "name":"International Business Machines",
+    "type":"Organization",
+    "id":{
+        "default" : "ibm",
+        "PERMID" : "4295904307",
+        "LEI" : "VGRQXHF3J8VDLUA7XE92"
+    }
       }
    ]
 }
@@ -167,12 +171,12 @@ id:{
    "version" : "1.0.0",
    "data" :
    [
-	{
-		"name":"IBM 6.25% of '19",
+    {
+        "name":"IBM 6.25% of '19",
                 "type":"Security",
                 "id" : {
-		"default" : "IBM 6.25% of '19",
-  	        "CUSIP" : "090241201"
+        "default" : "IBM 6.25% of '19",
+            "CUSIP" : "090241201"
                 }
         }
    ]
@@ -187,19 +191,19 @@ id:{
    "data" : [
     {
 
-	"name":"Virginia (Ginni) M. Rometty",
+    "name":"Virginia (Ginni) M. Rometty",
         "type":"Person",
         "id":{
-		"default" : "Virginia Rometty",
-	        "PERMID" : "34415504516"
+        "default" : "Virginia Rometty",
+            "PERMID" : "34415504516"
             }
-	},
+    },
         {
-	"name":"International Business Machines",
-	"type":"Organization",
-	"id":{
-		"default":"ibm"
-	}
+    "name":"International Business Machines",
+    "type":"Organization",
+    "id":{
+        "default":"ibm"
+    }
     }
 
    ]
@@ -214,12 +218,12 @@ id:{
    "data" :
    [
           {
-	    "name":"Information Technology",
-	    "type":"Industry",
-	    "id":{
-		"default":"Information Technology",
-		"GICS":"45"
-	        }
+        "name":"Information Technology",
+        "type":"Industry",
+        "id":{
+        "default":"Information Technology",
+        "GICS":"45"
+            }
           }
    ]
 }
@@ -232,13 +236,13 @@ id:{
    "data" :
    [
       {
-	"name":"United States of America",
-	"type":"Geo",
-	"id":{
-		"default":"USA",
-		"ISO ALPHA-2":"US",
-		"ISO ALPHA-3":"USA"
-	}
+    "name":"United States of America",
+    "type":"Geo",
+    "id":{
+        "default":"USA",
+        "ISO ALPHA-2":"US",
+        "ISO ALPHA-3":"USA"
+    }
      }
   ]
 }
@@ -252,14 +256,14 @@ id:{
    "data" :
    [
       {
-	"name":"Nick Kolba",
-	"type":"Contact",
-	"id":{
-		"default":"Nick Kolba",
-		"email":"nick@openfin.co",
-		"twitter":"nkolba",
-		"phone":"9171234567"
-	}
+    "name":"Nick Kolba",
+    "type":"Contact",
+    "id":{
+        "default":"Nick Kolba",
+        "email":"nick@openfin.co",
+        "twitter":"nkolba",
+        "phone":"9171234567"
+    }
       }
    ]
 }
