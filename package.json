@@ -12,7 +12,7 @@
     "@semantic-release/git": "^7.0.5"
   },
   "release": {
-    "branch" : "docs-pages",
+    "branch": "docs-pages",
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
