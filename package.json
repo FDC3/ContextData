@@ -1,7 +1,7 @@
 {
   "name": "fdc3-context-data",
   "main": "index.js",
-  "repository": "https://github.com/maoo/ContextData.git",
+  "repository": "https://github.com/FDC3/ContextData.git",
   "license": "Apache-2.0",
   "scripts": {
     "semantic-release": "semantic-release"
@@ -12,7 +12,7 @@
     "@semantic-release/git": "^7.0.5"
   },
   "release": {
-    "branch": "docs-pages",
+    "branch": "change-to-master",
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",

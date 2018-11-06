@@ -17,13 +17,13 @@ deploy:
     skip_cleanup: true
     script: npm run semantic-release
     on:
-      branch: docs-pages
+      branch: master
   - provider: script
     skip_cleanup: true
     # TODO - replace maoo/fdc3-pages-layout with FDC3/FDC3, as soon as code is contributed
     script: curl https://raw.githubusercontent.com/maoo/FDC3/common-docs-layout/docs/prepare-docs-release.sh | bash
     on:
-      branch: docs-pages
+      branch: master
   - provider: pages
     skip-cleanup: true
     github-token: $GH_TOKEN
@@ -34,7 +34,7 @@ deploy:
     local-dir: gh-pages-docs
     target_branch: gh-pages
     on:
-      branch: docs-pages
+      branch: master
 
 # TODO - enable it when ready to release
 # notifications:
