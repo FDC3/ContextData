@@ -1,5 +1,5 @@
 interface Portfolio extends Context {
-    $type: 'fdc3.portfolio',
+    type: 'fdc3.portfolio',
     id: {
         portfolioId?: string;
     },

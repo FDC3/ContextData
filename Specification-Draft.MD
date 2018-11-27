@@ -34,7 +34,7 @@ FDC3 recognizes that there are other object definitions for providing context be
 
 ```ts
 interface Context {
-    $type: string;
+    type: string;
     name?: string;
     id?: {
         [x:string]: string;
@@ -50,7 +50,7 @@ __Note:__ The below examples show how the base context data interface can be use
 #### Instrument ####
 ```json
 {
-    "$type" : "fdc3.instrument",
+    "type" : "fdc3.instrument",
     "name" : "Apple",
     "id" : 
     {  
@@ -64,7 +64,7 @@ __Note:__ The below examples show how the base context data interface can be use
 #### Contact ####
 ```json
 {
-    "$type": "fdc3.contact",
+    "type": "fdc3.contact",
     "name": "Nick Kolba",
     "id":{
         "email": "nick@openfin.co",
@@ -76,7 +76,7 @@ __Note:__ The below examples show how the base context data interface can be use
 #### Organization ####
 ```json
 {
-    "$type": "fdc3.organization",
+    "type": "fdc3.organization",
     "name": "IBM",
     "id": {
         "PERMID" : "4295904307",
@@ -87,10 +87,10 @@ __Note:__ The below examples show how the base context data interface can be use
 #### ContactList ####
 ```json
 {
-    "$type": "fdc3.contactList",
+    "type": "fdc3.contactList",
     "contacts": [
         {
-            "$type" : "fdc3.contact",
+            "type" : "fdc3.contact",
             "name":"Nick Kolba",
             "id":{
                 "email": "nick@openfin.co"
@@ -109,9 +109,9 @@ __Note:__ The below examples show how the base context data interface can be use
 #### Position ####
 ```json
 {
-    "$type": "fdc3.position",
+    "type": "fdc3.position",
     "instrument": {
-        "$type" : "fdc3.instrument",
+        "type" : "fdc3.instrument",
         "name" : "Apple",
         "id" : 
         {

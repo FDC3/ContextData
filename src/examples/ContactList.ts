@@ -1,4 +1,4 @@
 interface ContactList extends Context {
-    $type: 'fdc3.contactList',
+    type: 'fdc3.contactList',
     contacts: Contact[]
 }
