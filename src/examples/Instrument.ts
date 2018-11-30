@@ -1,5 +1,5 @@
 interface Instrument extends Context {
-    $type: 'fdc3.instrument';
+    type: 'fdc3.instrument';
     name: string;
     id: {
         ticker?: string;

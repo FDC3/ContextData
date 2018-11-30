@@ -12,13 +12,13 @@ Context objects are used when [declaring]() and [raising]() intents, and when [b
 ## Context Object
 
 Context can be summarised as:
-* Having a unique _$type_ identifier, used for routing.
+* Having a unique _type_ identifier, used for routing.
 * Optionally providing a name.
 * Optionally providing a map of equivalent identifiers.
 * Any other properties or metadata.
 ```typescript
 interface Context {
-    $type: string;
+    type: string;
     name?: string;
     id?: {
         [x:string]: string;
@@ -32,7 +32,7 @@ An instrument could for example be derived as (note that the name is required an
 
 ```typescript
 interface Instrument extends Context {
-    $type: 'fdc3.instrument',
+    type: 'fdc3.instrument',
     name: string;
     id: {
         ticker?: string;
@@ -46,7 +46,7 @@ E.g. as a JSON payload:
 
 ```json
 {
-    "$type" : "fdc3.instrument",
+    "type" : "fdc3.instrument",
     "name" : "Apple",
     "id" : 
     {  
