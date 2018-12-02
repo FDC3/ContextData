@@ -1,13 +1,8 @@
-<<<<<<< HEAD:docs/specs.md
 ---
 layout: default
 ---
 
-# FDC3 Context Objects - Version 0.0.1 #
-## Context Object Overview ##
-=======
 # FDC3 Context Data #
->>>>>>> b8b1ef5cb23c275722b33b6f895c1406688338d2:Specification-Draft.MD
 
 ## Context Data Overview ##
 
@@ -15,46 +10,10 @@ To interoperate, apps need to exchange commonly recognized context structures th
 
 Exchanging context is the most basic entry point to desktop interoperability.  The barriers to adoption for this interaction must be kept as low as possible.
 
-<<<<<<< HEAD:docs/specs.md
-```javascript
-{
-    "object": (string), //object type
-    "definition": (string) //uri of object type definition
-    "version": (string) //version # (semver)
-    "data": (array) //the context payload
-}
-```
-
-### Examples ###
-#### FDC3 Context Object ####
-```javascript
-{
-   "object" : "fdc3-context",
-   "definition" : "https://fdc3.org/context/1.0.0/",
-   "version" : "1.0.0",
-   "data" :
-       [
-          {
-             "type" : "security",
-         "name" : "Apple",
-     "id" : 
-               {  
-                  "ticker" : "aapl"
-                   "ISIN" : "US0378331005",
-                   "CUSIP" : "037833100",
-                   "FIGI" : "BBG000B9XRY4",
-                   "default" : "aapl"
-               }
-          }
-      ]
-}
-```
-=======
 There are two main use case for exchanging context data:
 
 * __Transmitting reference data between applications.__
   The source application will send as many known identifiers as possible, and the target application will try to match the entity based on the identifiers. It may then choose to map to its own internal domain representation for rendering purposes.
->>>>>>> b8b1ef5cb23c275722b33b6f895c1406688338d2:Specification-Draft.MD
 
   An example of this is sending an instrument or contact, when only an ISIN or email is required to reference the same data in another application.
 
@@ -79,7 +38,7 @@ FDC3 recognizes that there are other object definitions for providing context be
 
 ```ts
 interface Context {
-    $type: string;
+    type: string;
     name?: string;
     id?: {
         [x:string]: string;
@@ -95,24 +54,7 @@ __Note:__ The below examples show how the base context data interface can be use
 #### Instrument ####
 ```json
 {
-<<<<<<< HEAD:docs/specs.md
-   "object" : "fdc3-context",
-   "definition" : "https://fdc3.org/context/1.0.0/",
-   "version" : "1.0.0",
-   "data" :
-   [
-     {
-    "name":"International Business Machines",
-    "type":"Organization",
-    "id":{
-        "default" : "ibm",
-        "PERMID" : "4295904307",
-        "LEI" : "VGRQXHF3J8VDLUA7XE92"
-    }
-      }
-   ]
-=======
-    "$type" : "fdc3.instrument",
+    "type" : "fdc3.instrument",
     "name" : "Apple",
     "id" : 
     {  
@@ -121,94 +63,38 @@ __Note:__ The below examples show how the base context data interface can be use
         "CUSIP" : "037833100",
         "FIGI" : "BBG000B9XRY4",
     }
->>>>>>> b8b1ef5cb23c275722b33b6f895c1406688338d2:Specification-Draft.MD
 }
 ```
 #### Contact ####
 ```json
 {
-<<<<<<< HEAD:docs/specs.md
-   "object" : "fdc3-context",
-   "definition" : "https://fdc3.org/context/1.0.0/",
-   "version" : "1.0.0",
-   "data" :
-   [
-    {
-        "name":"IBM 6.25% of '19",
-                "type":"Security",
-                "id" : {
-        "default" : "IBM 6.25% of '19",
-            "CUSIP" : "090241201"
-                }
-        }
-   ]
-=======
-    "$type": "fdc3.contact",
+    "type": "fdc3.contact",
     "name": "Nick Kolba",
     "id":{
         "email": "nick@openfin.co",
         "twitter": "nkolba",
         "phone": "9171234567"
     }
->>>>>>> b8b1ef5cb23c275722b33b6f895c1406688338d2:Specification-Draft.MD
 }
 ```
 #### Organization ####
 ```json
 {
-<<<<<<< HEAD:docs/specs.md
-   "object" : "fdc3-context",
-   "definition" : "https://fdc3.org/context/1.0.0/",
-   "version" : "1.0.0",
-   "data" : [
-    {
-
-    "name":"Virginia (Ginni) M. Rometty",
-        "type":"Person",
-        "id":{
-        "default" : "Virginia Rometty",
-            "PERMID" : "34415504516"
-            }
-    },
-        {
-    "name":"International Business Machines",
-    "type":"Organization",
-    "id":{
-        "default":"ibm"
-    }
-=======
-    "$type": "fdc3.organization",
+    "type": "fdc3.organization",
     "name": "IBM",
     "id": {
         "PERMID" : "4295904307",
         "LEI" : "VGRQXHF3J8VDLUA7XE92"
->>>>>>> b8b1ef5cb23c275722b33b6f895c1406688338d2:Specification-Draft.MD
     }
 }
 ```
 #### ContactList ####
 ```json
 {
-<<<<<<< HEAD:docs/specs.md
-   "object" : "fdc3-context",
-   "definition" : "https://fdc3.org/context/1.0.0/",
-   "version" : "1.0.0",
-   "data" :
-   [
-          {
-        "name":"Information Technology",
-        "type":"Industry",
-        "id":{
-        "default":"Information Technology",
-        "GICS":"45"
-            }
-          }
-   ]
-=======
-    "$type": "fdc3.contactList",
+    "type": "fdc3.contactList",
     "contacts": [
         {
-            "$type" : "fdc3.contact",
+            "type" : "fdc3.contact",
             "name":"Nick Kolba",
             "id":{
                 "email": "nick@openfin.co"
@@ -222,53 +108,14 @@ __Note:__ The below examples show how the base context data interface can be use
             }
         }
     ]
->>>>>>> b8b1ef5cb23c275722b33b6f895c1406688338d2:Specification-Draft.MD
 }
 ```
 #### Position ####
 ```json
 {
-<<<<<<< HEAD:docs/specs.md
-   "object" : "fdc3-context",
-   "definition" : "https://fdc3.org/context/1.0.0/",
-   "version" : "1.0.0",
-   "data" :
-   [
-      {
-    "name":"United States of America",
-    "type":"Geo",
-    "id":{
-        "default":"USA",
-        "ISO ALPHA-2":"US",
-        "ISO ALPHA-3":"USA"
-    }
-     }
-  ]
-}
-```
-### Contact ###
-```javascript
-{
-   "object" : "fdc3-context",
-   "definition" : "https://fdc3.org/context/1.0.0/",
-   "version" : "1.0.0",
-   "data" :
-   [
-      {
-    "name":"Nick Kolba",
-    "type":"Contact",
-    "id":{
-        "default":"Nick Kolba",
-        "email":"nick@openfin.co",
-        "twitter":"nkolba",
-        "phone":"9171234567"
-    }
-      }
-   ]
-=======
-    "$type": "fdc3.position",
+    "type": "fdc3.position",
     "instrument": {
-        "$type" : "fdc3.instrument",
+        "type" : "fdc3.instrument",
         "name" : "Apple",
         "id" : 
         {
@@ -298,7 +145,6 @@ All standard identifier names are reserved names. Applications may use their own
 "id": {
     "CUSIP":"037833100",
     "foo":"bar"
->>>>>>> b8b1ef5cb23c275722b33b6f895c1406688338d2:Specification-Draft.MD
 }
 ```
 The identifier "foo" is proprietary, an application that can use it is free to do so. However, since multiple applications may want to use the "foo" name and may use it to mean different things, there is a need for applications to ensure that their identifiers use naming conventions that will avoid collision. The recommended approach here is to prefix the identifier name with a namespace. For example:

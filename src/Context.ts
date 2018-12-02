@@ -3,7 +3,7 @@ interface Context {
      * The type of the context that uniquely identifies it, e.g. "fdc3.instrument"     
      * Used to refer to the accepted context(s) when declaring intents.
      */
-    $type: string;
+    type: string;
 
     /**
      * The name of the context data (optional).
