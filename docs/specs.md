@@ -1,7 +1,8 @@
-# FDC3 Context Data #
+---
+layout: default
+---
 
 ## Context Data Overview ##
-
 To interoperate, apps need to exchange commonly recognized context structures that can indicate topic with any number of identifiers or mappings to different systems.
 
 Exchanging context is the most basic entry point to desktop interoperability.  The barriers to adoption for this interaction must be kept as low as possible.
