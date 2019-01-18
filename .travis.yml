@@ -36,7 +36,7 @@ deploy:
     local-dir: gh-pages-docs
     target_branch: gh-pages
     on:
-      branch: master
+      branch: new-docs-pages
 
 # TODO - enable it when ready to release
 # notifications:
