@@ -23,7 +23,7 @@ deploy:
     # TODO - replace maoo/fdc3-pages-layout with FDC3/FDC3, as soon as code is contributed
     script: curl https://raw.githubusercontent.com/maoo/FDC3/root-website/docs/prepare-docs-release.sh | bash
     on:
-      branch: master
+      branch: new-docs-pages
   - provider: pages
     skip-cleanup: true
     github-token: $GH_TOKEN
