@@ -1,5 +1,6 @@
 ---
 layout: default
+hidebanner: true
 ---
 
 ## Context Data Overview ##

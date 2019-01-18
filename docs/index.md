@@ -1,15 +1,7 @@
 ---
 layout: default
+sidebar: true
 ---
-
-## Context Data
-Context data object specifications, schemas, and examples
-
-* Extending APIs from one App to another is powerful...
-* However, it requires building to a specific API ahead of time
-* Standard context and intent definitions let us create workflows on the fly
-
-FDC3 Context Data defines a standard way to pass common identifiers between apps to create a seamless workflow.  FDC3 Context Data is not a symbology solution and is not focused on modeling financial objects.  The focus is on providing a standard envelope and a standard set of identifiers that can be used to set a lowest common denominator for interop.
 
 ### Context Envelope Structure
 ```javascript
